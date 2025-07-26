@@ -1,0 +1,272 @@
+/* Remove default spacing, make sure full size is available */
+body, #root, .App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f6f6f6;
+}
+
+/* Center the sign-in background */
+.signin-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 480px) {
+  .signin-form {
+    padding: 24px 20px;
+  }
+  
+  .signin-form h2 {
+    font-size: 1.8rem;
+  }
+  
+  .signin-form input[type="text"],
+  .signin-form input[type="password"],
+  .signin-form input[type="email"],
+  .signin-form select {
+    font-size: 0.95rem;
+    padding: 8px 14px;
+  }
+}
+
+/* The sign-in card itself */
+.signin-form {
+  background: #ff9100;
+  padding: 32px 28px;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px #0002;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+.signin-form h2 {
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 26px;
+  text-shadow: 2px 3px 0 #ffb457, 0px 0px 2px #fff;
+  letter-spacing: 1px;
+}
+
+/* Form labels and inputs */
+.signin-form label {
+  color: #111;
+  width: 100%;
+  font-size: 1.22rem;
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.signin-form input[type="text"],
+.signin-form input[type="password"],
+.signin-form input[type="email"],
+.signin-form select {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #fff;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  color: #222;
+  width: 100%;
+  max-width: 280px;
+  outline: none;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+  height: 40px;
+}
+
+.signin-form input[type="text"]:focus,
+.signin-form input[type="password"]:focus {
+  border: 2.2px solid #fffbe6;
+}
+
+/* User role radio buttons */
+.userrole-row {
+  width: 100%;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #111;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.radio input[type="radio"] {
+  display: none;
+}
+
+.custom-radio {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid #fffbe6;
+  background: #ff9100;
+  display: inline-block;
+  margin-right: 3px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.radio input[type="radio"]:checked + .custom-radio::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fffbe6;
+}
+
+/* Sign-in button */
+.signin-btn {
+  margin: 30px 0 14px 0;
+  padding: 16px 38px;
+  background: #fffbe6;
+  color: #222;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  box-shadow: 0 5px 0 #d4902c70;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.signin-btn:hover {
+  background: #ffb457;
+  color: #fff;
+  box-shadow: 0 5px 0 #fffbe6;
+}
+
+/* Sign-up link */
+.signup-link {
+  color: #fffbe6;
+  font-size: 1.06rem;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.signup-link b {
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsive for tablet */
+@media (max-width: 700px) {
+  .signin-form {
+    min-width: 280px;
+    padding: 30px 8vw 20px 8vw;
+    border-radius: 28px;
+  }
+  .signin-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .signin-btn {
+    font-size: 1.08rem;
+    padding: 12px 22px;
+    border-radius: 22px;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 500px) {
+  .signin-bg {
+    padding: 10vw 0;
+  }
+  .signin-form {
+    min-width: unset;
+    max-width: 98vw;
+    padding: 20px 4vw 18px 4vw;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #0002;
+  }
+  .signin-form h2 {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+  }
+  .signin-form label {
+    font-size: 1.03rem;
+    gap: 10px;
+    margin-bottom: 9px;
+  }
+  .signin-form input[type="text"],
+  .signin-form input[type="password"] {
+    font-size: 0.98rem;
+    padding: 6px 11px;
+    border-radius: 13px;
+    margin-left: 7px;
+  }
+  .userrole-row {
+    font-size: 0.97rem;
+    gap: 7px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+  }
+  .custom-radio {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    margin-right: 2px;
+  }
+  .radio input[type="radio"]:checked + .custom-radio::after {
+    top: 3px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+  }
+  .signin-btn {
+    font-size: 0.97rem;
+    padding: 9px 13px;
+    border-radius: 15px;
+    margin: 18px 0 8px 0;
+  }
+  .signup-link {
+    font-size: 0.93rem;
+    margin-top: 6px;
+  }
+}
+
+.form-success {
+  color: #249624;
+  background: #e4ffe4;
+  border: 1px solid #7be17b;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+

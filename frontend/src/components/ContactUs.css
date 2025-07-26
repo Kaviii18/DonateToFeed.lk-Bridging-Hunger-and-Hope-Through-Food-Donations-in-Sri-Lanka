@@ -1,0 +1,157 @@
+.contact-us-container {
+  min-height: calc(100vh - 80px); /* Subtracting header height */
+  background: #f8f9fa;
+  padding: 40px 20px;
+  margin-top: 0;
+}
+
+.contact-us-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-us-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact-us-content h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff9100;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.contact-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.contact-info-item {
+  text-align: center;
+  padding: 20px;
+  background: #fff6ee;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.contact-info-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact-info-item i {
+  font-size: 24px;
+  color: #ff9100;
+  margin-bottom: 15px;
+}
+
+.contact-info-item h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-info-item p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff9100;
+  box-shadow: 0 0 0 3px rgba(255, 145, 0, 0.1);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  background: #ff9100;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background: #e68200;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 145, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contact-us-container {
+    padding: 20px 15px;
+  }
+
+  .contact-us-content {
+    padding: 30px 20px;
+  }
+
+  .contact-us-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-info-grid {
+    gap: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 16px;
+  }
+}

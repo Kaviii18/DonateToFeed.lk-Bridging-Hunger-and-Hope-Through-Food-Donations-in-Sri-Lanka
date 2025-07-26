@@ -1,0 +1,94 @@
+.listing-management {
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.listing-management h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.listing-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 10px #00000010;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.listing-table th,
+.listing-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+.listing-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.btn {
+  padding: 6px 10px;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.edit {
+  background: #ff9100;
+  color: white;
+}
+
+.delete {
+  background: #f44336;
+  color: white;
+}
+
+.save {
+  background: #4caf50;
+  color: white;
+}
+
+.cancel {
+  background: #ccc;
+  color: #333;
+}
+
+input {
+  padding: 4px 6px;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn.approve {
+  background-color: #00c853;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.btn.approve:hover {
+  background-color: #00e676;
+}
+
+.status.approved {
+  background-color: #c8e6c9;
+  color: #388e3c;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
